@@ -1,15 +1,11 @@
 import css from './FriendList.module.css';
+import { FriendListItem } from 'components/FriendListItem/FriendListItem'
 import PropTypes from 'prop-types';
-export function FriendList({ friends }) {
-    return <ul className={css.friendlist}>
-        {friends.map(({ avatar, name, isOnline, id }) => {
-              return <li key={id} className={css.item}>
-                <span className={`${css.status}  ${isOnline ? css.online : css.offline}`}></span>
-                <img className={css.avatar} src={avatar} alt={name} width="48" />
-                <p className={css.name}>{name}</p>
-            </li>
-            
-        })}
+
+export const FriendList=({ friends })=>{
+    return <ul className={css.friendList}>
+        {friends.map(({id,avatar,name,isOnline}) =><FriendListItem id={id} name={name} avatar={avatar} isOnline={isOnline} />
+            )}
     </ul>
 }
 FriendList.propTypes = {
@@ -22,3 +18,4 @@ FriendList.propTypes = {
         
     
 }
+

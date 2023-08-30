@@ -1,6 +1,6 @@
 import css from './Statistics.module.css'
 import PropTypes from 'prop-types';
-export function Statistics({ title, stats }) {
+export const Statistics=({ title, stats }) =>{
  const newStats = stats.reduce((acc, item) => {
   if (!acc[item.label]) {
     acc[item.label] = { label: item.label, percentage: 0 };
@@ -15,12 +15,12 @@ const newArr = Object.values(newStats);
     <section className={css.statistics}>
       {title && <h2 className={css.title}>{title}</h2>}
 
-      <ul className={css.statlist}>
+      <ul className={css.statList}>
         { newArr.map((item) => {
           return (
             <li key={item.label} className={css.item}>
               <span className={css.label}>{item.label}</span>
-              <span className={css.percentage}>{item.percentage}</span>
+              <span className={css.percentage}>{item.percentage}%</span>
             </li>
           );
         })}

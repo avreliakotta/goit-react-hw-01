@@ -1,6 +1,6 @@
 import css from './TransactionHistory.module.css';
 import PropTypes from 'prop-types';
-export function TransactionHistory({ items }) {
+export const TransactionHistory=({ items })=> {
 const groupedData = items.reduce((acc, item) => {
   if (!acc[item.type]) {
     acc[item.type] = [];
