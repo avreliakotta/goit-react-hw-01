@@ -1,0 +1,26 @@
+.transactionHhistory {
+  margin: 80px;
+  width: 600px;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+.transactionHhistory thead th {
+  background-color: rgb(56, 155, 155);
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.transactionHhistory tbody td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: center;
+  color: rgba(5, 5, 5, 0.5);
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+}
